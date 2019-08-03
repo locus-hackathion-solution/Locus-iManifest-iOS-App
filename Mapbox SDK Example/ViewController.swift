@@ -35,6 +35,14 @@ class ViewController: UIViewController {
 //
 //    }
 
+    @IBAction func wringleButtonPressed(_ sender: UIButton) {
+        sender.wiggle()
+    }
+
+    
 
 }
 
+extension UIButton: Animations {
+
+}

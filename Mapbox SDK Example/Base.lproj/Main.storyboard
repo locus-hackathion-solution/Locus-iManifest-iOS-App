@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="txs-4c-CAG">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -25,13 +25,24 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="styleURL__" value="mapbox://styles/mapbox/streets-v11"/>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvp-fW-vJO">
+                                <rect key="frame" x="184" y="433" width="46" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Wiggle"/>
+                                <connections>
+                                    <action selector="wringleButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2l9-Vv-OGI"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Yvp-fW-vJO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="40" id="5qv-tE-uqL"/>
                             <constraint firstItem="F4Y-dx-ifk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="7Vm-2r-LyY"/>
                             <constraint firstAttribute="trailing" secondItem="F4Y-dx-ifk" secondAttribute="trailing" id="HzC-PX-Kbf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Yvp-fW-vJO" secondAttribute="bottom" constant="40" id="IWz-wM-GYx"/>
                             <constraint firstItem="F4Y-dx-ifk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="MKT-JT-Jv9"/>
                             <constraint firstAttribute="bottom" secondItem="F4Y-dx-ifk" secondAttribute="bottom" id="rAG-zs-RPQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Yvp-fW-vJO" secondAttribute="trailing" constant="40" id="xYl-2w-FoP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -41,6 +52,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-75" y="21"/>
+        </scene>
+        <!--Animate Route View Controller-->
+        <scene sceneID="jyR-ku-Mfu">
+            <objects>
+                <viewController id="txs-4c-CAG" customClass="AnimateRouteViewController" customModule="Mapbox_SDK_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5XW-yK-A1z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="4fA-H7-mG9"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5SY-4W-Qrm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1138" y="21"/>
         </scene>
     </scenes>
 </document>
