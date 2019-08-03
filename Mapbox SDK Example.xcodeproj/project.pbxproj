@@ -12,6 +12,7 @@
 		0CDA6A5C22F5A7E800EA180A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CDA6A5A22F5A7E800EA180A /* Main.storyboard */; };
 		0CDA6A5E22F5A7E900EA180A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CDA6A5D22F5A7E900EA180A /* Assets.xcassets */; };
 		0CDA6A6122F5A7E900EA180A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CDA6A5F22F5A7E900EA180A /* LaunchScreen.storyboard */; };
+		37B90643F9E68AAC85B365EC /* Pods_Mapbox_SDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19CE8F5D2529A525E4B78F2 /* Pods_Mapbox_SDK_Example.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		0CDA6A5D22F5A7E900EA180A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0CDA6A6022F5A7E900EA180A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0CDA6A6222F5A7E900EA180A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		49FEE4ACA7FE4FD7632023B8 /* Pods-Mapbox SDK Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mapbox SDK Example.release.xcconfig"; path = "Target Support Files/Pods-Mapbox SDK Example/Pods-Mapbox SDK Example.release.xcconfig"; sourceTree = "<group>"; };
+		B19CE8F5D2529A525E4B78F2 /* Pods_Mapbox_SDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mapbox_SDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DC43CC6180208CA023A0702E /* Pods-Mapbox SDK Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mapbox SDK Example.debug.xcconfig"; path = "Target Support Files/Pods-Mapbox SDK Example/Pods-Mapbox SDK Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37B90643F9E68AAC85B365EC /* Pods_Mapbox_SDK_Example.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0866722992F8686027339FE8 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DC43CC6180208CA023A0702E /* Pods-Mapbox SDK Example.debug.xcconfig */,
+				49FEE4ACA7FE4FD7632023B8 /* Pods-Mapbox SDK Example.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		0CDA6A4A22F5A7E700EA180A = {
 			isa = PBXGroup;
 			children = (
 				0CDA6A5522F5A7E800EA180A /* Mapbox SDK Example */,
 				0CDA6A5422F5A7E800EA180A /* Products */,
+				0866722992F8686027339FE8 /* Pods */,
+				350856E025D24C9984B0BBE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +81,14 @@
 			path = "Mapbox SDK Example";
 			sourceTree = "<group>";
 		};
+		350856E025D24C9984B0BBE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B19CE8F5D2529A525E4B78F2 /* Pods_Mapbox_SDK_Example.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +96,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CDA6A6522F5A7E900EA180A /* Build configuration list for PBXNativeTarget "Mapbox SDK Example" */;
 			buildPhases = (
+				140018EE9C2167796A20FCAE /* [CP] Check Pods Manifest.lock */,
 				0CDA6A4F22F5A7E700EA180A /* Sources */,
 				0CDA6A5022F5A7E700EA180A /* Frameworks */,
 				0CDA6A5122F5A7E700EA180A /* Resources */,
+				99460BF28D624644D75B8E80 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +156,55 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		140018EE9C2167796A20FCAE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Mapbox SDK Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99460BF28D624644D75B8E80 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Mapbox SDK Example/Pods-Mapbox SDK Example-frameworks.sh",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework",
+				"${PODS_ROOT}/Mapbox-iOS-SDK/dynamic/Mapbox.framework.dSYM",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Mapbox.framework",
+				"${DWARF_DSYM_FOLDER_PATH}/Mapbox.framework.dSYM",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Mapbox SDK Example/Pods-Mapbox SDK Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0CDA6A4F22F5A7E700EA180A /* Sources */ = {
@@ -280,6 +356,7 @@
 		};
 		0CDA6A6622F5A7E900EA180A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DC43CC6180208CA023A0702E /* Pods-Mapbox SDK Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -298,6 +375,7 @@
 		};
 		0CDA6A6722F5A7E900EA180A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 49FEE4ACA7FE4FD7632023B8 /* Pods-Mapbox SDK Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

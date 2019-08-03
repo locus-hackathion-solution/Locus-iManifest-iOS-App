@@ -7,12 +7,23 @@
 //
 
 import UIKit
+import Mapbox
+
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mapView: MGLMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+
+        setupUserLocation()
+    }
+
+    func setupUserLocation() {
+        mapView.setCenter(CLLocationCoordinate2D(latitude: 12.923708, longitude: 77.671661), zoomLevel: 14, animated: false)
+        view.addSubview(mapView)
+        mapView.styleURL = MGLStyle.streetsStyleURL
+
     }
 
 
