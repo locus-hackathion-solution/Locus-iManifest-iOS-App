@@ -20,8 +20,10 @@ class ViewController: UIViewController {
     }
 
     func setupUserLocation() {
-        mapView.setCenter(CLLocationCoordinate2D(latitude: 12.923708, longitude: 77.671661), zoomLevel: 14, animated: false)
+//        mapView.setCenter(CLLocationCoordinate2D(latitude: 12.923708, longitude: 77.671661), zoomLevel: 14, animated: false)
         view.addSubview(mapView)
+        mapView.zoomLevel = 9
+        mapView.showsUserLocation = true
         mapView.styleURL = MGLStyle.streetsStyleURL
 
     }
