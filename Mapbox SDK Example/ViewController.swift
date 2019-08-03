@@ -10,6 +10,7 @@ import UIKit
 import Mapbox
 
 
+
 class ViewController: UIViewController {
 
     @IBOutlet weak var mapView: MGLMapView!
@@ -25,8 +26,14 @@ class ViewController: UIViewController {
         mapView.zoomLevel = 9
         mapView.showsUserLocation = true
         mapView.styleURL = MGLStyle.streetsStyleURL
-
+        mapView.userTrackingMode = .follow
     }
+
+//    private func calculateRoute(from originCoordinate: CLLocationCoordinate2D, to destinationCoordinate: CLLocationCoordinate2D, completion: @escaping (Route? Error?)->Void) {
+//
+////        let originWaypoint = Waypoint(
+//
+//    }
 
 
 }
