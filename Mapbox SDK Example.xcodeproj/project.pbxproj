@@ -15,6 +15,7 @@
 		0CDA6A6922F5D1C700EA180A /* AnimateRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA6A6822F5D1C700EA180A /* AnimateRouteViewController.swift */; };
 		0CDA6A6B22F6222300EA180A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA6A6A22F6222300EA180A /* Model.swift */; };
 		0CDA6A6D22F6224900EA180A /* Routes.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CDA6A6C22F6224000EA180A /* Routes.json */; };
+		0CDA6A6F22F625B000EA180A /* DisplayRouteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA6A6E22F625B000EA180A /* DisplayRouteViewController.swift */; };
 		37B90643F9E68AAC85B365EC /* Pods_Mapbox_SDK_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B19CE8F5D2529A525E4B78F2 /* Pods_Mapbox_SDK_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		0CDA6A6822F5D1C700EA180A /* AnimateRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimateRouteViewController.swift; sourceTree = "<group>"; };
 		0CDA6A6A22F6222300EA180A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		0CDA6A6C22F6224000EA180A /* Routes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Routes.json; sourceTree = "<group>"; };
+		0CDA6A6E22F625B000EA180A /* DisplayRouteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DisplayRouteViewController.swift; sourceTree = "<group>"; };
 		49FEE4ACA7FE4FD7632023B8 /* Pods-Mapbox SDK Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mapbox SDK Example.release.xcconfig"; path = "Target Support Files/Pods-Mapbox SDK Example/Pods-Mapbox SDK Example.release.xcconfig"; sourceTree = "<group>"; };
 		B19CE8F5D2529A525E4B78F2 /* Pods_Mapbox_SDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Mapbox_SDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC43CC6180208CA023A0702E /* Pods-Mapbox SDK Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Mapbox SDK Example.debug.xcconfig"; path = "Target Support Files/Pods-Mapbox SDK Example/Pods-Mapbox SDK Example.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 				0CDA6A5822F5A7E800EA180A /* ViewController.swift */,
 				0CDA6A6C22F6224000EA180A /* Routes.json */,
 				0CDA6A6822F5D1C700EA180A /* AnimateRouteViewController.swift */,
+				0CDA6A6E22F625B000EA180A /* DisplayRouteViewController.swift */,
 				0CDA6A5A22F5A7E800EA180A /* Main.storyboard */,
 				0CDA6A5D22F5A7E900EA180A /* Assets.xcassets */,
 				0CDA6A5F22F5A7E900EA180A /* LaunchScreen.storyboard */,
@@ -224,6 +227,7 @@
 				0CDA6A5722F5A7E800EA180A /* AppDelegate.swift in Sources */,
 				0CDA6A6922F5D1C700EA180A /* AnimateRouteViewController.swift in Sources */,
 				0CDA6A6B22F6222300EA180A /* Model.swift in Sources */,
+				0CDA6A6F22F625B000EA180A /* DisplayRouteViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

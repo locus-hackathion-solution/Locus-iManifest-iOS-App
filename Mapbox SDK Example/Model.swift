@@ -28,7 +28,7 @@ struct Routes: Codable {
         case route = "route"
     }
 
-    static public func loadJSONData() -> Routes? {
+    static public func loadJSONData() -> Routes {
         let pathURL = Bundle.main.url(forResource: "Routes", withExtension: "json")!
         do {
             let data = try Data(contentsOf: pathURL)
