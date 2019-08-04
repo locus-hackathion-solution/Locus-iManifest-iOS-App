@@ -97,6 +97,8 @@ class DisplayRouteViewController: UIViewController {
         }
         layers.removeAll()
 
+        mapView.setCenter(CLLocationCoordinate2D(latitude: 12.933663, longitude: 77.688818), zoomLevel: 12.5, animated: true)
+
         collapseInputContainerView()
         NetworkManager.getRoute(completion: handleGetRouteResponse(routes:error:))
 
