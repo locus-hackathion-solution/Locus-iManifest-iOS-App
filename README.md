@@ -2,7 +2,7 @@
 Bootstrap Paradox Hackathon - Locus.sh - Travel Time Prediction
 
 ## Instruction to Compile and run application using Xcode
-* close this repository
+* clone this repository
 * run pod install (from terminal)
 * open the .xcodeworkspace (not .xcodeproject)
 
