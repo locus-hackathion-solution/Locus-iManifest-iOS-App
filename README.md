@@ -7,3 +7,8 @@ Bootstrap Paradox Hackathon - Locus.sh - Travel Time Prediction
 * open the .xcodeworkspace (not .xcodeproject)
 
 Ensure the backend is up and running before launching the App.
+
+The screenshot of the App is:
+
+![iManifest iOS App](iManifest-App-Screenshot.jpg)
+
