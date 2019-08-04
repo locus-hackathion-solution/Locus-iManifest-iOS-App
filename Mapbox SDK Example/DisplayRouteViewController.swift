@@ -17,7 +17,7 @@ class DisplayRouteViewController: UIViewController {
     @IBOutlet weak var inputContainerHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var collapseButton: UIButton!
     @IBOutlet weak var expandButton: UIButton!
-    @IBOutlet weak var okButton: UIButton!
+    @IBOutlet weak var routeButton: UIButton!
     @IBOutlet weak var clearButton: UIButton!
 
 
@@ -42,7 +42,6 @@ class DisplayRouteViewController: UIViewController {
 
         mapView.delegate = self
 
-
         let sourceLocation = CLLocationCoordinate2D(latitude: route.source.lat, longitude: route.source.long)
         let destinationLocation = CLLocationCoordinate2D(latitude: route.destination.lat, longitude: route.destination.long)
         let sourceAnnotation = MGLPointAnnotation()
@@ -61,10 +60,9 @@ class DisplayRouteViewController: UIViewController {
         inputContainerHeightConstraint.constant = 14
 
         UIView.animate(withDuration: 0.5) {
-//            self.collapseButton.isHidden = true
             self.expandButton.isHidden = false
             self.clearButton.isHidden = true
-            self.okButton.isHidden = true
+            self.routeButton.isHidden = true
             self.view.layoutIfNeeded()
         }
     }
@@ -75,13 +73,47 @@ class DisplayRouteViewController: UIViewController {
 
         UIView.animate(withDuration: 0.5) {
             self.expandButton.isHidden = true
-//            self.collapseButton.isHidden = false
             self.clearButton.isHidden = false
-            self.okButton.isHidden = false
+            self.routeButton.isHidden = false
             self.view.layoutIfNeeded()
         }
     }
 
+    @IBAction func routeButtonPressed(_ sender: UIButton) {
+
+        route.route.segments.forEach { (segment) in
+            addPolyline(to: mapView.style!, color: segment.uiColor)
+            addPolyline(withCoordinates: segment.coordinates)
+        }
+        
+    }
+
+    private func addPolyline(to style: MGLStyle, color: UIColor) {
+        // Add an empty MGLShapeSource, we’ll keep a reference to this and add points to this later.
+        let source = MGLShapeSource(identifier: "polyline\(Date().timeIntervalSince1970)", shape: nil, options: nil)
+        style.addSource(source)
+        polylineSource = source
+
+        // Add a layer to style our polyline.
+        let layer = MGLLineStyleLayer(identifier: "polyline\((Date().timeIntervalSince1970))", source: source)
+        layer.lineJoin = NSExpression(forConstantValue: "round")
+        layer.lineCap = NSExpression(forConstantValue: "round")
+        layer.lineColor = NSExpression(forConstantValue: color)
+
+        // The line width should gradually increase based on the zoom level.
+        layer.lineWidth = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'linear', nil, %@)",
+                                       [14: 3, 18: 20])
+        style.addLayer(layer)
+    }
+
+    private func addPolyline(withCoordinates coordinates: [CLLocationCoordinate2D]) {
+        var mutableCoordinates = coordinates
+
+        let polyline = MGLPolylineFeature(coordinates: &mutableCoordinates, count: UInt(mutableCoordinates.count))
+
+        // Updating the MGLShapeSource’s shape will have the map redraw our polyline with the current coordinates.
+        polylineSource?.shape = polyline
+    }
 
 }
 

@@ -140,6 +140,9 @@
                                         <rect key="frame" x="264" y="160" width="43" height="32"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Route"/>
+                                        <connections>
+                                            <action selector="routeButtonPressed:" destination="VKI-Pf-y92" eventType="touchUpInside" id="0jQ-Ix-dD4"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zfu-AC-wfJ">
                                         <rect key="frame" x="8" y="160" width="36" height="32"/>
@@ -216,7 +219,7 @@
                         <outlet property="expandButton" destination="0xA-Dd-02a" id="xNr-ih-6h2"/>
                         <outlet property="inputContainerHeightConstraint" destination="8tN-Gb-YU6" id="fr1-3j-ZAd"/>
                         <outlet property="inputContainerView" destination="OrP-eq-Mfj" id="AGw-gK-fuB"/>
-                        <outlet property="okButton" destination="Tk0-O3-9bL" id="TuS-aE-FPG"/>
+                        <outlet property="routeButton" destination="Tk0-O3-9bL" id="TuS-aE-FPG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rBs-KT-t6w" userLabel="First Responder" sceneMemberID="firstResponder"/>

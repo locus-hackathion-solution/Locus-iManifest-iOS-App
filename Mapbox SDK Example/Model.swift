@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Mapbox
 
 // MARK: - Routes
 struct Routes: Codable {
@@ -74,6 +75,23 @@ struct Segment: Codable {
         case waypoints = "waypoints"
         case color = "color"
     }
+
+    var uiColor: UIColor {
+        switch color {
+        case "red":
+            return .red
+        case "green":
+            return .green
+        case "blue":
+            return .blue
+        default:
+            return .gray
+        }
+    }
+
+    var coordinates: [CLLocationCoordinate2D] {
+        return waypoints.map { $0.coordinate }
+    }
 }
 
 // MARK: - Waypoint
@@ -84,5 +102,9 @@ struct Waypoint: Codable {
     enum CodingKeys: String, CodingKey {
         case lat = "lat"
         case lon = "lon"
+    }
+
+    var coordinate: CLLocationCoordinate2D {
+        return CLLocationCoordinate2D(latitude: lat, longitude: lon)
     }
 }
