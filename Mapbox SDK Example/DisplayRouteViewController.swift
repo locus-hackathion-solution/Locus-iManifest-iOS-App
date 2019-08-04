@@ -27,6 +27,8 @@ class DisplayRouteViewController: UIViewController {
     }()
 
 
+    var layers: [MGLLineStyleLayer] = []
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -55,8 +57,7 @@ class DisplayRouteViewController: UIViewController {
 
         mapView.addAnnotation(destinationAnnotation)
     }
-    @IBAction func collapseButtonPressed(_ sender: UIButton) {
-        print("Collapse Button Pressed")
+    fileprivate func collapseInputContainerView() {
         inputContainerHeightConstraint.constant = 14
 
         UIView.animate(withDuration: 0.5) {
@@ -67,8 +68,12 @@ class DisplayRouteViewController: UIViewController {
         }
     }
 
-    @IBAction func expandButtonPressed(_ sender: UIButton) {
-        print("Expand Button Pressed")
+    @IBAction func collapseButtonPressed(_ sender: UIButton) {
+        print("Collapse Button Pressed")
+        collapseInputContainerView()
+    }
+
+    fileprivate func expandInputContainerView() {
         inputContainerHeightConstraint.constant = 200
 
         UIView.animate(withDuration: 0.5) {
@@ -79,18 +84,28 @@ class DisplayRouteViewController: UIViewController {
         }
     }
 
+    @IBAction func expandButtonPressed(_ sender: UIButton) {
+        print("Expand Button Pressed")
+        expandInputContainerView()
+    }
+
     @IBAction func routeButtonPressed(_ sender: UIButton) {
 
 
+        layers.forEach { (layer) in
+            mapView.style?.removeLayer(layer)
+        }
+        layers.removeAll()
+
+        collapseInputContainerView()
         NetworkManager.getRoute(completion: handleGetRouteResponse(routes:error:))
 
-
-        
     }
 
     func handleGetRouteResponse(routes: Routes?, error: Error?) {
         guard error == nil else {
             print("Error fetching route")
+            expandInputContainerView()
             return
         }
 
@@ -119,6 +134,7 @@ class DisplayRouteViewController: UIViewController {
         layer.lineWidth = NSExpression(format: "mgl_interpolate:withCurveType:parameters:stops:($zoomLevel, 'linear', nil, %@)",
                                        [14: 3, 18: 20])
         style.addLayer(layer)
+        layers.append(layer)
     }
 
     private func addPolyline(withCoordinates coordinates: [CLLocationCoordinate2D]) {
