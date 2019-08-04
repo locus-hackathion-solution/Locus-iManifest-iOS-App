@@ -1,0 +1,16 @@
+PODS:
+  - Mapbox-iOS-SDK (4.4.1)
+
+DEPENDENCIES:
+  - Mapbox-iOS-SDK
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Mapbox-iOS-SDK
+
+SPEC CHECKSUMS:
+  Mapbox-iOS-SDK: e6a4f236c77f914ca2e19b929c6cc6b077ba1c4c
+
+PODFILE CHECKSUM: 0ec11e8e151811c41b85ebdd0c938b6dd3f58178
+
+COCOAPODS: 1.6.1
