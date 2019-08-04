@@ -81,11 +81,26 @@ class DisplayRouteViewController: UIViewController {
 
     @IBAction func routeButtonPressed(_ sender: UIButton) {
 
-        route.route.segments.forEach { (segment) in
-            addPolyline(to: mapView.style!, color: segment.uiColor)
-            addPolyline(withCoordinates: segment.coordinates)
-        }
+
+        NetworkManager.getRoute(completion: handleGetRouteResponse(routes:error:))
+
+
         
+    }
+
+    func handleGetRouteResponse(routes: Routes?, error: Error?) {
+        guard error == nil else {
+            print("Error fetching route")
+            return
+        }
+
+        if let routes = routes {
+            route = routes
+            route.route.segments.forEach { (segment) in
+                addPolyline(to: mapView.style!, color: segment.uiColor)
+                addPolyline(withCoordinates: segment.coordinates)
+            }
+        }
     }
 
     private func addPolyline(to style: MGLStyle, color: UIColor) {

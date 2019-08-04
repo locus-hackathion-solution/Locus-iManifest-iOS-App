@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0CAC623F22F62D3E0078BA85 /* UIView + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAC623E22F62D3D0078BA85 /* UIView + Extension.swift */; };
 		0CAC624122F647940078BA85 /* Routes.json in Resources */ = {isa = PBXBuildFile; fileRef = 0CAC624022F647940078BA85 /* Routes.json */; };
+		0CAC624322F67A270078BA85 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAC624222F67A270078BA85 /* NetworkManager.swift */; };
 		0CDA6A5722F5A7E800EA180A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA6A5622F5A7E800EA180A /* AppDelegate.swift */; };
 		0CDA6A5922F5A7E800EA180A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CDA6A5822F5A7E800EA180A /* ViewController.swift */; };
 		0CDA6A5C22F5A7E800EA180A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CDA6A5A22F5A7E800EA180A /* Main.storyboard */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		0CAC623E22F62D3D0078BA85 /* UIView + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView + Extension.swift"; sourceTree = "<group>"; };
 		0CAC624022F647940078BA85 /* Routes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Routes.json; sourceTree = "<group>"; };
+		0CAC624222F67A270078BA85 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		0CDA6A5322F5A7E800EA180A /* Mapbox SDK Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Mapbox SDK Example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CDA6A5622F5A7E800EA180A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CDA6A5822F5A7E800EA180A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				0CDA6A5622F5A7E800EA180A /* AppDelegate.swift */,
 				0CDA6A6A22F6222300EA180A /* Model.swift */,
+				0CAC624222F67A270078BA85 /* NetworkManager.swift */,
 				0CDA6A5822F5A7E800EA180A /* ViewController.swift */,
 				0CDA6A6C22F6224000EA180A /* Routes_Two_Segments.json */,
 				0CAC624022F647940078BA85 /* Routes.json */,
@@ -233,6 +236,7 @@
 				0CDA6A5922F5A7E800EA180A /* ViewController.swift in Sources */,
 				0CDA6A5722F5A7E800EA180A /* AppDelegate.swift in Sources */,
 				0CAC623F22F62D3E0078BA85 /* UIView + Extension.swift in Sources */,
+				0CAC624322F67A270078BA85 /* NetworkManager.swift in Sources */,
 				0CDA6A6922F5D1C700EA180A /* AnimateRouteViewController.swift in Sources */,
 				0CDA6A6B22F6222300EA180A /* Model.swift in Sources */,
 				0CDA6A6F22F625B000EA180A /* DisplayRouteViewController.swift in Sources */,
